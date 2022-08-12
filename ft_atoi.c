@@ -6,7 +6,7 @@
 /*   By: gsilva <gsilva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 22:30:31 by gsilva            #+#    #+#             */
-/*   Updated: 2022/07/29 23:09:52 by gsilva           ###   ########.fr       */
+/*   Updated: 2022/08/08 15:17:42 by gsilva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,3 @@ int	ft_atoi(char *str)
 	}
 	return (nbr * s);
 }
-
-/*#include<stdio.h>
-#include<stdlib.h>
-
-int	main(int ac, char **av)
-{
-	if (ac == 2)
-	{
-		printf("meu atoi: %d\natoi original: %d\n", ft_atoi(av[1]), atoi(av[1]));
-	}
-}*/

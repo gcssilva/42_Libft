@@ -6,7 +6,7 @@
 /*   By: gsilva <gsilva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 23:51:51 by gsilva            #+#    #+#             */
-/*   Updated: 2022/07/30 00:03:40 by gsilva           ###   ########.fr       */
+/*   Updated: 2022/08/08 15:13:08 by gsilva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,3 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
-
-/*#include<ctype.h>
-#include<stdio.h>
-
-int	main(void)
-{
-	printf("meu isascii: %d\nisascii original: %d\n", ft_isascii(), isascii());
-}*/
