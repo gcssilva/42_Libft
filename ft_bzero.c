@@ -6,6 +6,17 @@
 /*   By: gsilva <gsilva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 00:06:16 by gsilva            #+#    #+#             */
-/*   Updated: 2022/07/30 00:15:53 by gsilva           ###   ########.fr       */
+/*   Updated: 2022/08/13 11:48:35 by gsilva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
+{
+	char	*tmp;
+
+	tmp = (char *)s;
+	while (n-- > 0)
+		tmp[n] = 0;
+}
