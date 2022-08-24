@@ -6,7 +6,20 @@
 /*   By: gsilva <gsilva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 10:48:43 by gsilva            #+#    #+#             */
-/*   Updated: 2022/08/13 10:48:44 by gsilva           ###   ########.fr       */
+/*   Updated: 2022/08/13 15:48:27 by gsilva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, int c)
+{
+	int	i;
+
+	i = ft_strlen(s) - 1;
+	while (s[i] != c && i >= 0)
+		i--;
+	if (s[i] == c)
+		return (&s[i]);
+	return (NULL);
+}

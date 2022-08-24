@@ -6,16 +6,13 @@
 /*   By: gsilva <gsilva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 14:42:19 by gsilva            #+#    #+#             */
-/*   Updated: 2022/08/12 23:43:22 by gsilva           ###   ########.fr       */
+/*   Updated: 2022/08/14 12:02:40 by gsilva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *str, int c)
 {
-    int		i;
-    
-    i = 0;
-    while (str[i] != 0 && str[i] != c)
-        i++;
-    return ((char *)&str[i]);
+	while (*str && *str != c)
+		*str++;
+	return ((char *)&str);
 }
