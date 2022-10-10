@@ -6,7 +6,7 @@
 /*   By: gsilva <gsilva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 10:48:12 by gsilva            #+#    #+#             */
-/*   Updated: 2022/08/14 12:02:28 by gsilva           ###   ########.fr       */
+/*   Updated: 2022/10/04 10:23:27 by gsilva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char	*d;
 	char	*s;
-	int		i;
+	size_t	i;
 
 	d = (char *)dest;
 	s = (char *)src;
