@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsilva <gsilva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/10 14:42:19 by gsilva            #+#    #+#             */
-/*   Updated: 2022/10/12 10:10:43 by gsilva           ###   ########.fr       */
+/*   Created: 2022/10/11 09:33:32 by gsilva            #+#    #+#             */
+/*   Updated: 2022/10/11 09:52:05 by gsilva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	while (*str && *str != c)
-		str++;
-	if (*str != c)
-		return (NULL);
-	return ((char *)str);
+	char	*str;
+	int		i;
+
+	i = 0;
+	str = (char *)malloc(ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1);
+	while (*s1)
+		str[i++] = *s1++;
+	while (*s2)
+		str[i++] = *s2++;
+	str[i] = 0;
+	return (str);
 }

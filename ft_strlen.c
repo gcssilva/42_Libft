@@ -6,11 +6,13 @@
 /*   By: gsilva <gsilva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 15:06:24 by gsilva            #+#    #+#             */
-/*   Updated: 2022/08/14 12:04:16 by gsilva           ###   ########.fr       */
+/*   Updated: 2022/10/13 09:32:25 by gsilva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(char *str)
 {
 	int	i;
 

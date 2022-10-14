@@ -1,22 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsilva <gsilva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/10 14:42:19 by gsilva            #+#    #+#             */
-/*   Updated: 2022/10/12 10:10:43 by gsilva           ###   ########.fr       */
+/*   Created: 2022/10/11 09:54:53 by gsilva            #+#    #+#             */
+/*   Updated: 2022/10/13 09:36:26 by gsilva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	while (*str && *str != c)
-		str++;
-	if (*str != c)
+	size_t	start;
+	size_t	end;
+	size_t	i;
+	char	*trim;
+
+	start = 0;
+	end = ft_strlen((char *)s1);
+	while (ft_strchr(set, s1[start]) != NULL)
+		start++;
+	while (ft_strchr(set, s1[end]) != NULL)
+		end--;
+	trim = (char *)malloc(end - start + 2);
+	if (!trim)
 		return (NULL);
-	return ((char *)str);
+	i = 0;
+	while (start <= end)
+		trim[i++] = s1[start++];
+	trim[i] = 0;
+	return (trim);
 }
