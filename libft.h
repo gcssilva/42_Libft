@@ -6,7 +6,7 @@
 /*   By: gsilva <gsilva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 10:32:55 by gsilva            #+#    #+#             */
-/*   Updated: 2022/10/14 08:34:35 by gsilva           ###   ########.fr       */
+/*   Updated: 2022/10/14 12:07:54 by gsilva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,14 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 
 void	*ft_memchr(const void *s, int c, size_t n);
+
+void	ft_putchar_fd(char c, int fd);
+
+void	ft_putstr_fd(char *s, int fd);
+
+void	ft_putendl_fd(char *s, int fd);
+
+void	ft_putnbr_fd(int n, int fd);
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
