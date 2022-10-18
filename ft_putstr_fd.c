@@ -6,7 +6,7 @@
 /*   By: gsilva <gsilva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 11:30:40 by gsilva            #+#    #+#             */
-/*   Updated: 2022/10/14 11:43:03 by gsilva           ###   ########.fr       */
+/*   Updated: 2022/10/18 09:02:31 by gsilva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ void	ft_putstr_fd(char *s, int fd)
 	int		i;
 
 	i = -1;
-	while (s[++i])
+	while (s && s[++i])
 		ft_putchar_fd(s[i], fd);
 }

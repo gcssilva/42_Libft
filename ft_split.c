@@ -6,7 +6,7 @@
 /*   By: gsilva <gsilva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 08:24:43 by gsilva            #+#    #+#             */
-/*   Updated: 2022/10/13 10:34:24 by gsilva           ###   ########.fr       */
+/*   Updated: 2022/10/18 09:33:22 by gsilva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	ft_wc(char *s, char c)
 	int		wc;
 
 	wc = 0;
-	while (*s)
+	while (s && *s)
 	{
 		while (*s == c)
 		{
@@ -60,6 +60,8 @@ char	**ft_split(char const *s, char c)
 	size_t	i;
 	char	**split;
 
+	if (!s)
+		return (NULL);
 	wc = ft_wc((char *)s, c);
 	split = (char **)malloc(sizeof(char *) * (wc + 1));
 	if (!split)
