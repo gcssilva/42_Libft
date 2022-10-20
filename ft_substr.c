@@ -6,7 +6,7 @@
 /*   By: gsilva <gsilva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 11:06:02 by gsilva            #+#    #+#             */
-/*   Updated: 2022/10/13 11:37:59 by gsilva           ###   ########.fr       */
+/*   Updated: 2022/10/20 08:33:25 by gsilva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!str)
 		return (NULL);
 	i = 0;
-	while (s[start] && i < len)
-		str[i++] = s[start++];
+	if (start < ft_strlen((char *)s))
+	{
+		while (s[start] && i < len)
+			str[i++] = s[start++];
+	}
 	str[i] = 0;
 	return (str);
 }
