@@ -6,7 +6,7 @@
 /*   By: gsilva <gsilva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 10:48:40 by gsilva            #+#    #+#             */
-/*   Updated: 2022/10/10 10:32:02 by gsilva           ###   ########.fr       */
+/*   Updated: 2022/10/20 10:36:58 by gsilva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	i;
 	size_t	j;
 
-	if (*little == 0)
+	if (!*little)
 		return ((char *)big);
 	i = 0;
-	while (big[i] && i < len)
+	while ((i < len) && big[i])
 	{
 		j = 0;
 		while (little[j] && i + j < len)

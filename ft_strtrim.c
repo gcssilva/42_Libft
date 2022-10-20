@@ -6,7 +6,7 @@
 /*   By: gsilva <gsilva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 09:54:53 by gsilva            #+#    #+#             */
-/*   Updated: 2022/10/13 09:36:26 by gsilva           ###   ########.fr       */
+/*   Updated: 2022/10/20 09:57:54 by gsilva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	i;
 	char	*trim;
 
+	if (!s1 || !set)
+		return (NULL);
 	start = 0;
 	end = ft_strlen((char *)s1);
-	while (ft_strchr(set, s1[start]) != NULL)
+	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
-	while (ft_strchr(set, s1[end]) != NULL)
+	while (end > start && ft_strchr(set, s1[end]))
 		end--;
 	trim = (char *)malloc(end - start + 2);
 	if (!trim)

@@ -6,7 +6,7 @@
 /*   By: gsilva <gsilva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 10:48:31 by gsilva            #+#    #+#             */
-/*   Updated: 2022/10/18 09:42:16 by gsilva           ###   ########.fr       */
+/*   Updated: 2022/10/20 10:35:38 by gsilva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	j;
 	size_t	l;
 
+	if (size == 0)
+		return (ft_strlen((char *)src));
 	i = ft_strlen(dst);
 	j = i;
 	if (i > size)

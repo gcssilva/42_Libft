@@ -6,7 +6,7 @@
 /*   By: gsilva <gsilva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 10:32:55 by gsilva            #+#    #+#             */
-/*   Updated: 2022/10/15 08:29:21 by gsilva           ###   ########.fr       */
+/*   Updated: 2022/10/20 10:34:46 by gsilva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ void	ft_putstr_fd(char *s, int fd);
 
 void	ft_putendl_fd(char *s, int fd);
 
-void	ft_putnbr_fd(int n, int fd);
+void	ft_putnbr_fd(int nbr, int fd);
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 

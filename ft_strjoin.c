@@ -6,7 +6,7 @@
 /*   By: gsilva <gsilva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 09:33:32 by gsilva            #+#    #+#             */
-/*   Updated: 2022/10/19 09:13:25 by gsilva           ###   ########.fr       */
+/*   Updated: 2022/10/20 08:40:13 by gsilva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*str;
 	int		i;
 
-	if (!s1 && !s2)
+	if (!s1 || !s2)
 		return (NULL);
 	i = 0;
 	str = (char *)malloc(ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1);
