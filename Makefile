@@ -23,16 +23,16 @@ BOBJ	=		$(BONUS:.c=.o)
 
 all:			$(NAME)
 
-bonus:			$(BOBJ)
-		ar rcs	$(NAME) $(BOBJ)
-
 $(NAME):		$(OBJ)
-		ar rcs	$(NAME) $(OBJ)
+		ar -rc	$(NAME) $(OBJ)
+
+bonus:			$(BOBJ)
+		ar -rc	$(NAME) $(BOBJ)
 
 clean:
 				$(RM) $(OBJ) $(BOBJ)
 
-fclean: clean	
+fclean:			clean	
 				$(RM) $(NAME)
 
-re:		fclean	$(NAME)
+re:				fclean $(NAME)
