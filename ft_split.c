@@ -32,8 +32,8 @@ static int	ft_wc(char *s, char c)
 	{
 		while (*s == c)
 		{
-			s++;
 			v = 0;
+			s++;
 		}
 		while (*s && *s != c)
 		{

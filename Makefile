@@ -24,10 +24,10 @@ BOBJ	=		$(BONUS:.c=.o)
 all:			$(NAME)
 
 $(NAME):		$(OBJ)
-		ar -rc	$(@) $(<)
+		ar -rc	$(@) $(OBJ)
 
 bonus:			$(BOBJ)
-		ar -rc	$(@) $(<)
+		ar -rc	$(NAME) $(BOBJ)
 
 clean:
 				$(RM) $(OBJ) $(BOBJ)
@@ -36,3 +36,7 @@ fclean:			clean
 				$(RM) $(NAME)
 
 re:				fclean $(NAME)
+
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) $(BONUS)
+	gcc -nostartfiles -shared -o libft.so $(OBJ) $(BOBJ)
