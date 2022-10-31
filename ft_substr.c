@@ -18,10 +18,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	size_t	lens;
 
-	lens = ft_strlen((char *)s);
 	if (!s)
 		return (NULL);
-	if (start > lens)
+	lens = ft_strlen((char *)s);
+	if (start >= lens)
 		return (ft_strdup(""));
 	lens = ft_strlen((char *)&s[start]);
 	if (len > lens)
