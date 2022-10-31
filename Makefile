@@ -1,6 +1,6 @@
 NAME	=		libft.a
 
-CC		=		gcc
+CC		=		cc
 
 CFLAGS	=		-Wall -Wextra -Werror
 
@@ -24,10 +24,10 @@ BOBJ	=		$(BONUS:.c=.o)
 all:			$(NAME)
 
 $(NAME):		$(OBJ)
-		ar -rc	$(@) $(OBJ)
+		ar -r	$(@) $(OBJ)
 
 bonus:			$(BOBJ)
-		ar -rc	$(NAME) $(BOBJ)
+		ar -r	$(NAME) $(BOBJ)
 
 clean:
 				$(RM) $(OBJ) $(BOBJ)
@@ -36,7 +36,3 @@ fclean:			clean
 				$(RM) $(NAME)
 
 re:				fclean $(NAME)
-
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) $(BONUS)
-	gcc -nostartfiles -shared -o libft.so $(OBJ) $(BOBJ)
