@@ -24,25 +24,16 @@ static int	ft_wl(char *s, char c)
 
 static int	ft_wc(char *s, char c)
 {
-	int		v;
-	int		wc;
+	int	wc;
+	int	i;
 
 	wc = 0;
-	while (s && *s)
-	{
-		while (*s == c)
-		{
-			v = 0;
-			s++;
-		}
-		while (*s && *s != c)
-		{
-			s++;
-			v = 1;
-		}
-		if (v == 1)
+	i = -1;
+	if (s[0] != c && s[0] != 0)
+		wc++;
+	while (s[++i])
+		if (s[i] == c && (s [i + 1]) != c && (s [i + 1]) != 0)
 			wc++;
-	}
 	return (wc);
 }
 
